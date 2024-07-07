@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>huagongfuxi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<style>
+    body{
+        color: rgba(255, 255, 255, 0.705);
+        font-size: 26px; 
+        background-color: rgba(0, 0, 0, 0.877);
+    }
+    li {
+        margin-bottom: 20px;
+    }
+</style>
+<body>
+<main>
+    <h2>1.流体流动</h2>
+    <ol>
+    <li>理想气体方程：\(\rho =\cfrac{m}{V}=\cfrac{pM}{RT} \)</li>
+    
+    <li>\(1atm=101325Pa \approx 101.3kpa = 0.1013MPa = 760mmHg \approx 10.33mH_2O \)</li>
+    
+    <li>表压=绝压-当地大气压</li>
+    <li>真空度=当地大气压-绝压</li>
+    
+    <li>\(U形压差管满足:p_1 - p_2 = (\rho_2 - \rho_1)gR \)</li>
+    
+    <li>\(实际流体的机械能衡算方程：\begin{cases}gz_1+\cfrac{u_1^2}{2}+\cfrac{p_1}{\rho}+w_e=gz_2+\cfrac{u_2^2}{2}+\cfrac{p_2}{\rho}+w_f\\\\z_1+\cfrac{u_1^2}{2}+\cfrac{p_1}{\rho g}+h_e=z_2+\cfrac{u_2^2}{2g}+\cfrac{p_2}{\rho g}+w_f\end{cases} \)</li>
+    <li>\(若流体静止,则u=0,w_e=0,w_f=0,于是式子变为: gz_1+\cfrac{p_1}{\rho}=gz_2+\cfrac{p_2}{\rho} \)</li>
+    <li>\(若流体系统无外加光,即w_e=0,则机械能衡算方程变为:
+        gz_1 + \cfrac{u_1^2}{2}+\cfrac{p_1}{\rho}=gz_2+\cfrac{u_2^2}{2}+\cfrac{p_2}{\rho}+w_f \)</li>
+    
+    <li>\(
+    雷诺数:Re=\cfrac{du\rho}{\mu}\
+    Re \le 2000时属于层流,Re \gt 4000时属于湍流 \)</li>
+    <li>\(单位质量流体的沿程损失 w_f=\lambda \cfrac{l}{d}\cdot \cfrac{u^2}{2}(J \cdot kg^{-1}) \)</li>
+    <li>\(单位体积的流体的沿程损失 \Delta p_f=\rho w_f=\lambda \cfrac{l}{d} \cdot \cfrac{\rho u^2}{2} (J \cdot m^{-3} or Pa) \)</li>
+    <li>\(单位重量流体的沿程损失 h_f=\cfrac{w_f}{g}=\lambda \cfrac{l}{d} \cdot \cfrac{u^2}{2g} \)</li>
+    <li>\(层流时:\lambda = \cfrac{64}{Re} \)</li>
+    </li>
+    <li>\(非圆形管的沿程损失计算要将管径d用d_e替换:d_e=4 \times 水力半径=\cfrac{4 \times 流通截面积}{湿润周边} \)</li>
+    <li>任一管路的总阻力损失等于所有沿程损失与局部阻力损失之和:<br><br>\(w_f=\sum \left(\lambda \cfrac{l}{d}+\sum \xi \right)\cfrac{u^2}{2}=\sum \lambda \left(\cfrac{l+\sum {l_e}}{d}\right)\cfrac{u^2}{2}
+        u=\cfrac{4V_s}{\pi d^2} \)</li>
+    <li>\(测速管测速:v=\sqrt{\cfrac{2gR(\rho_0 - \rho)}{\rho}},若被测流体为气体可以忽略分子的"-\rho" \)</li>
+    <li>\(孔板流量计:\begin{cases}u_0=C_0\sqrt{\cfrac{2(p_1 - p_0)}{\rho}}\\\\u_0=C_0\sqrt{\cfrac{2gR(\rho_0 - \rho)}{\rho}}\\\\
+    V_s=u_0 A_0\end{cases} \)</li>
+    </li>   
+    </oL>
+    <h2>2.流体运送机械</h2>
+    <ol>
+    <li>离心泵叶轮分为：开式、半开式、闭式</li>
+    <li>\(管路所需压头:h_e=\Delta z+ \cfrac{\Delta p}{\rho g} + \cfrac{\Delta u^2}{2g} + \sum h_f \)</li>
+    <li>\(H = h_0 + \cfrac{p_c - p_b}{\rho g} + \cfrac{u_c^2 - u_b^2}{2g} + h_{f,b-c}
+        \eta = \cfrac{N_e}{N} = \cfrac{HQ\rho g}{N} \)</li>
+    
+    <li>\(
+    比例定律(转速n):
+    \begin{cases}
+        \cfrac{Q'}{Q} = \cfrac{n'}{n}\\\\
+        \cfrac{H'}{H} = \left(\cfrac{n'}{n}\right)^2\\\\
+        \cfrac{N'}{N} = \left(\cfrac{n'}{n}\right)^3
+    \end{cases}
+    \)</li>
+    <li>\(
+    比例定律(叶轮尺寸D):
+    \begin{cases}
+        \cfrac{Q'}{Q} = \left(\cfrac{D'}{D}\right)^3\\\\
+        \cfrac{H'}{H} = \left(\cfrac{D'}{D}\right)^2\\\\
+        \cfrac{N'}{N} = \left(\cfrac{D'}{D}\right)^5
+    \end{cases}
+    \)</li>
+
+    <li>\(
+    管路特性方程: 
+    \begin{cases}
+        h_e = \Delta z + \cfrac{\Delta p}{\rho g} + \cfrac{\Delta u^2}{2g} + \sum h_f\\\\
+        \sum h_f = \lambda \cfrac{\sum{l + l_e}}{d}\cdot \cfrac{u^2}{2g}=\left(\cfrac{8\lambda}{\pi ^2 g}\right)\cfrac{\sum(l + l_e)}{d^5}Q^2
+    \end{cases}
+    \)</li>
+    <li>
+        \(汽蚀余量:\Delta h = \left(\cfrac{p_e}{\rho g} + \cfrac{u_e^2}{2g} \right)- \cfrac{p_v}{\rho g} \)
+    </li>
+    
+    </ol>
+    <h2>5.传热</h2>
+    <ol>
+    <li>\(q=\cfrac{dQ}{dA} \)</li>
+    <li>\(传热速率 = \cfrac{传热温差}{热阻} \)</li>
+    <li>\(Q=\cfrac{t_1 - t_{n + 1}}{\sum _{i=1}^{n}\cfrac{b_i}{\lambda_i A_{mi}}} = \cfrac{t_1 - t_{n + 1}}{\sum _{i=1}^{n}\cfrac{\ln(r_{i + 1}/r_i)}{2 \pi l\lambda_i}} \)</li>
+    </ol>
+</main>
+</body>
+
+</html>
